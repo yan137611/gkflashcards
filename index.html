@@ -886,7 +886,7 @@ function defRows(d){
 
   return d.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{
 
-    const m=l.match(/^(modal v|v|vt.|vi.|adj|adv|n|prep|pron|num|art|conj|int|det)\.?\s*(.*)$/);
+    const m=l.match(/^(modal v|vt|vi|num|pron|prep|adj|adv|art|conj|int|det|v|n)\.?\s*(.*)$/);
 
     return m?`<div class="row"><span class="pos">${esc(m[1])}.</span><span>${esc(m[2])}</span></div>`
 
